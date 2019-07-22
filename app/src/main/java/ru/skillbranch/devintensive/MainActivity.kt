@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         sendBtn.setOnClickListener(this)
 
-        messageEt.setOnEditorActionListener { v, actionId, event ->
+        messageEt.setOnEditorActionListener { _, actionId, event ->
             if(actionId == EditorInfo.IME_ACTION_DONE || event?.keyCode == KeyEvent.KEYCODE_ENTER){
                 applyData()
                 hideKeyboard()
