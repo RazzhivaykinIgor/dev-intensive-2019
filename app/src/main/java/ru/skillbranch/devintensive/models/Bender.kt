@@ -18,7 +18,7 @@ class Bender(var status: Status = Status.NORMAL, var question: Question = Questi
     fun listenAnswer(answer: String): Pair<String, Triple<Int, Int, Int>>{
         return if(!validation(answer)){
             Log.d("M_Bender", answer)
-            "${question.validateError()}\n ${question.question}" to status.color
+            "${question.validateError()}\n${question.question}" to status.color
         } else {
             when(question){
                 Question.IDLE -> question.question to status.color
